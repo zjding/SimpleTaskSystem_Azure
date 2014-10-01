@@ -73,6 +73,11 @@
   <ItemGroup>
     <Compile Include="EntityFramework\SimpleTaskSystemDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\SimpleTaskSystemRepositoryBase.cs" />
+    <Compile Include="Migrations\201410011936505_InitialCreate.cs" />
+    <Compile Include="Migrations\201410011936505_InitialCreate.Designer.cs">
+      <DependentUpon>201410011936505_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SimpleTaskSystemDataModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -88,6 +93,11 @@
       <Project>{17298EA0-AF73-4F30-B6F1-2066100D7D74}</Project>
       <Name>SimpleTaskSystem.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201410011936505_InitialCreate.resx">
+      <DependentUpon>201410011936505_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

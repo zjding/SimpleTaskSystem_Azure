@@ -22,3 +22,5 @@ C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Infrastructure.EntityFramewo
 C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Infrastructure.EntityFramework\obj\Debug\SimpleTaskSystem.Infrastructure.EntityFramework.csprojResolveAssemblyReference.cache
 C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Infrastructure.EntityFramework\obj\Debug\SimpleTaskSystem.Infrastructure.EntityFramework.dll
 C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Infrastructure.EntityFramework\obj\Debug\SimpleTaskSystem.Infrastructure.EntityFramework.pdb
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Infrastructure.EntityFramework\obj\Debug\SimpleTaskSystem.Migrations.InitialCreate.resources
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Infrastructure.EntityFramework\obj\Debug\SimpleTaskSystem.Infrastructure.EntityFramework.csproj.GenerateResource.Cache
