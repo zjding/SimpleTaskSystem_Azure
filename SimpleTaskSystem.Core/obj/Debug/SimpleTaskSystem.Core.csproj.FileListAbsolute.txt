@@ -1,0 +1,16 @@
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\SimpleTaskSystem.Core.dll.config
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\SimpleTaskSystem.Core.dll
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\SimpleTaskSystem.Core.pdb
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\Abp.dll
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\Castle.Core.dll
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\Castle.Facilities.Logging.dll
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\Castle.Windsor.dll
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\System.Collections.Immutable.dll
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\Abp.xml
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\Castle.Core.xml
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\Castle.Facilities.Logging.xml
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\Castle.Windsor.xml
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\System.Collections.Immutable.xml
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\obj\Debug\SimpleTaskSystem.Core.csprojResolveAssemblyReference.cache
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\obj\Debug\SimpleTaskSystem.Core.dll
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\obj\Debug\SimpleTaskSystem.Core.pdb
