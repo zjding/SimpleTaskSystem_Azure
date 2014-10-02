@@ -4,7 +4,10 @@ using Abp.Dependency;
 using Abp.Modules;
 using Abp.Startup;
 using Abp.Startup.Application;
+using Abp.WebApi.Controllers.Dynamic.Builders;
 using Abp.WebApi.Startup;
+using SimpleTaskSystem.People;
+using SimpleTaskSystem.Tasks;
 
 namespace SimpleTaskSystem
 {
@@ -24,6 +27,14 @@ namespace SimpleTaskSystem
         {
             base.Initialize(initializationContext);
             IocManager.Instance.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
+
+            DynamicApiControllerBuilder
+                .For<ITaskAppService>("tasksystem/task")
+                .Build();
+
+            DynamicApiControllerBuilder
+                .For<IPersonAppService>("tasksystem/person")
+                .Build();
         }
     }
 }

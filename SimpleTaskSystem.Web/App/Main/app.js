@@ -18,17 +18,17 @@
             {
                 url: '/', //default
                 config: {
-                    templateUrl: '/App/Main/views/home/home.cshtml',
-                    menuText: localize('HomePage'),
-                    menuItem: 'HomePage'
+                    templateUrl: '/App/Main/views/task/list.cshtml',
+                    menuText: localize('TaskList'),
+                    menuItem: 'TaskList'
                 }
             },
             {
-                url: '/about',
+                url: '/new',
                 config: {
-                    templateUrl: '/App/Main/views/about/about.cshtml',
-                    menuText: localize('About'),
-                    menuItem: 'About'
+                    templateUrl: '/App/Main/views/task/new.cshtml',
+                    menuText: localize('NewTask'),
+                    menuItem: 'NewTask'
                 }
             }
         ]);

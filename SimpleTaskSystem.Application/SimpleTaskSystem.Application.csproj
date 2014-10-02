@@ -72,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DtoMappings.cs" />
     <Compile Include="People\Dtos\GetAllPeopleOutput.cs" />
     <Compile Include="People\Dtos\PersonDto.cs" />
     <Compile Include="People\IPersonAppService.cs" />

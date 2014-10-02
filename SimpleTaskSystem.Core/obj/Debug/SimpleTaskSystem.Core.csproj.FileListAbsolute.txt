@@ -13,3 +13,4 @@ C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\Castle.Windso
 C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\bin\Debug\System.Collections.Immutable.xml
 C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\obj\Debug\SimpleTaskSystem.Core.dll
 C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\obj\Debug\SimpleTaskSystem.Core.pdb
+C:\Projects\SimpleTaskSystem_Azure\SimpleTaskSystem.Core\obj\Debug\SimpleTaskSystem.Core.csprojResolveAssemblyReference.cache

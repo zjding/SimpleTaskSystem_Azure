@@ -11,3 +11,446 @@ DEBUG 2014-09-06 12:22:21,769 [1    ] Abp.Modules.AbpModuleLoader              -
 DEBUG 2014-09-06 12:22:21,769 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 DEBUG 2014-09-06 12:22:21,770 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.Web.SimpleTaskSystemWebModule, SimpleTaskSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 DEBUG 2014-09-06 12:22:22,385 [1    ] Abp.Modules.AbpModuleLoader              - 11 modules loaded.
+DEBUG 2014-10-02 09:49:44,379 [1    ] Abp.Modules.AbpModuleLoader              - Loading Abp modules...
+DEBUG 2014-10-02 09:49:44,436 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Application.AbpApplicationModule, Abp.Application, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 09:49:44,437 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Modules.AbpStartupModule, Abp, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 09:49:44,439 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Infrastructure.EntityFramework.AbpEntityFrameworkModule, Abp.Infrastructure.EntityFramework, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 09:49:44,466 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Startup.AbpWebModule, Abp.Web, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 09:49:44,466 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.WebApi.Startup.AbpWebApiModule, Abp.Web.Api, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 09:49:44,468 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Mvc.Startup.AbpWebMvcModule, Abp.Web.Mvc, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 09:49:44,766 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 09:49:44,766 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 09:49:44,768 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.Infrastructure.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 09:49:44,769 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 09:49:44,769 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.Web.SimpleTaskSystemWebModule, SimpleTaskSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 09:49:45,221 [1    ] Abp.Modules.AbpModuleLoader              - 11 modules loaded.
+ERROR 2014-10-02 09:50:35,426 [7    ] Default                                  - One or more errors occurred.
+System.AggregateException: One or more errors occurred. ---> Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Abp.WebApi.Controllers.Dynamic.Selectors.DyanamicHttpActionDescriptor.<ExecuteAsync>b__0(Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+---> (Inner Exception #0) Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)<---
+
+WARN  2014-10-02 09:50:35,429 [7    ] Default                                  - There are 1 validation errors:
+WARN  2014-10-02 09:50:35,429 [7    ] Default                                  - input is null! (input)
+DEBUG 2014-10-02 14:12:34,086 [1    ] Abp.Modules.AbpModuleLoader              - Loading Abp modules...
+DEBUG 2014-10-02 14:12:34,640 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Application.AbpApplicationModule, Abp.Application, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:12:34,642 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Modules.AbpStartupModule, Abp, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:12:34,646 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Infrastructure.EntityFramework.AbpEntityFrameworkModule, Abp.Infrastructure.EntityFramework, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:12:34,660 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Startup.AbpWebModule, Abp.Web, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:12:34,660 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.WebApi.Startup.AbpWebApiModule, Abp.Web.Api, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:12:34,663 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Mvc.Startup.AbpWebMvcModule, Abp.Web.Mvc, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:12:34,922 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:12:34,922 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:12:34,924 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.Infrastructure.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:12:34,925 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:12:34,925 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.Web.SimpleTaskSystemWebModule, SimpleTaskSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:12:35,062 [1    ] Abp.Modules.AbpModuleLoader              - 11 modules loaded.
+DEBUG 2014-10-02 14:28:09,521 [1    ] Abp.Modules.AbpModuleLoader              - Loading Abp modules...
+DEBUG 2014-10-02 14:28:09,582 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Application.AbpApplicationModule, Abp.Application, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:28:09,583 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Modules.AbpStartupModule, Abp, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:28:09,585 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Infrastructure.EntityFramework.AbpEntityFrameworkModule, Abp.Infrastructure.EntityFramework, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:28:09,592 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Startup.AbpWebModule, Abp.Web, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:28:09,592 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.WebApi.Startup.AbpWebApiModule, Abp.Web.Api, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:28:09,594 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Mvc.Startup.AbpWebMvcModule, Abp.Web.Mvc, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:28:09,857 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:28:09,857 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:28:09,859 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.Infrastructure.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:28:09,860 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:28:09,860 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.Web.SimpleTaskSystemWebModule, SimpleTaskSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:28:10,005 [1    ] Abp.Modules.AbpModuleLoader              - 11 modules loaded.
+ERROR 2014-10-02 14:33:03,823 [17   ] Default                                  - One or more errors occurred.
+System.AggregateException: One or more errors occurred. ---> Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Abp.WebApi.Controllers.Dynamic.Selectors.DyanamicHttpActionDescriptor.<ExecuteAsync>b__0(Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+---> (Inner Exception #0) Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)<---
+
+WARN  2014-10-02 14:33:03,826 [17   ] Default                                  - There are 1 validation errors:
+WARN  2014-10-02 14:33:03,827 [17   ] Default                                  - input is null! (input)
+ERROR 2014-10-02 14:33:22,602 [13   ] Default                                  - One or more errors occurred.
+System.AggregateException: One or more errors occurred. ---> Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Abp.WebApi.Controllers.Dynamic.Selectors.DyanamicHttpActionDescriptor.<ExecuteAsync>b__0(Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+---> (Inner Exception #0) Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)<---
+
+WARN  2014-10-02 14:33:22,602 [13   ] Default                                  - There are 1 validation errors:
+WARN  2014-10-02 14:33:22,602 [13   ] Default                                  - input is null! (input)
+ERROR 2014-10-02 14:38:35,812 [25   ] Default                                  - One or more errors occurred.
+System.AggregateException: One or more errors occurred. ---> Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Abp.WebApi.Controllers.Dynamic.Selectors.DyanamicHttpActionDescriptor.<ExecuteAsync>b__0(Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+---> (Inner Exception #0) Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)<---
+
+WARN  2014-10-02 14:38:35,812 [25   ] Default                                  - There are 1 validation errors:
+WARN  2014-10-02 14:38:35,812 [25   ] Default                                  - input is null! (input)
+ERROR 2014-10-02 14:38:44,581 [44   ] Default                                  - One or more errors occurred.
+System.AggregateException: One or more errors occurred. ---> Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Abp.WebApi.Controllers.Dynamic.Selectors.DyanamicHttpActionDescriptor.<ExecuteAsync>b__0(Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+---> (Inner Exception #0) Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)<---
+
+WARN  2014-10-02 14:38:44,582 [44   ] Default                                  - There are 1 validation errors:
+WARN  2014-10-02 14:38:44,582 [44   ] Default                                  - input is null! (input)
+DEBUG 2014-10-02 14:50:13,295 [1    ] Abp.Modules.AbpModuleLoader              - Loading Abp modules...
+DEBUG 2014-10-02 14:50:13,956 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Application.AbpApplicationModule, Abp.Application, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:50:13,956 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Modules.AbpStartupModule, Abp, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:50:13,959 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Infrastructure.EntityFramework.AbpEntityFrameworkModule, Abp.Infrastructure.EntityFramework, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:50:13,965 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Startup.AbpWebModule, Abp.Web, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:50:13,965 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.WebApi.Startup.AbpWebApiModule, Abp.Web.Api, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:50:13,968 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Mvc.Startup.AbpWebMvcModule, Abp.Web.Mvc, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:50:14,241 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:50:14,241 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:50:14,243 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.Infrastructure.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:50:14,244 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:50:14,244 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.Web.SimpleTaskSystemWebModule, SimpleTaskSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:50:14,375 [1    ] Abp.Modules.AbpModuleLoader              - 11 modules loaded.
+ERROR 2014-10-02 14:50:18,896 [8    ] Default                                  - One or more errors occurred.
+System.AggregateException: One or more errors occurred. ---> Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Abp.WebApi.Controllers.Dynamic.Selectors.DyanamicHttpActionDescriptor.<ExecuteAsync>b__0(Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+---> (Inner Exception #0) Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)<---
+
+WARN  2014-10-02 14:50:18,899 [8    ] Default                                  - There are 1 validation errors:
+WARN  2014-10-02 14:50:18,899 [8    ] Default                                  - input is null! (input)
+ERROR 2014-10-02 14:50:21,317 [9    ] Default                                  - One or more errors occurred.
+System.AggregateException: One or more errors occurred. ---> Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Abp.WebApi.Controllers.Dynamic.Selectors.DyanamicHttpActionDescriptor.<ExecuteAsync>b__0(Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+---> (Inner Exception #0) Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)<---
+
+WARN  2014-10-02 14:50:21,317 [9    ] Default                                  - There are 1 validation errors:
+WARN  2014-10-02 14:50:21,317 [9    ] Default                                  - input is null! (input)
+DEBUG 2014-10-02 14:59:35,552 [1    ] Abp.Modules.AbpModuleLoader              - Loading Abp modules...
+DEBUG 2014-10-02 14:59:35,613 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Application.AbpApplicationModule, Abp.Application, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:59:35,614 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Modules.AbpStartupModule, Abp, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:59:35,616 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Startup.Infrastructure.EntityFramework.AbpEntityFrameworkModule, Abp.Infrastructure.EntityFramework, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:59:35,622 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Startup.AbpWebModule, Abp.Web, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:59:35,622 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.WebApi.Startup.AbpWebApiModule, Abp.Web.Api, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:59:35,625 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: Abp.Web.Mvc.Startup.AbpWebMvcModule, Abp.Web.Mvc, Version=0.3.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:59:35,890 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemCoreModule, SimpleTaskSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:59:35,890 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemApplicationModule, SimpleTaskSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:59:35,892 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemDataModule, SimpleTaskSystem.Infrastructure.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:59:35,893 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.SimpleTaskSystemWebApiModule, SimpleTaskSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:59:35,893 [1    ] Abp.Modules.AbpModuleLoader              - Loaded module: SimpleTaskSystem.Web.SimpleTaskSystemWebModule, SimpleTaskSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2014-10-02 14:59:36,035 [1    ] Abp.Modules.AbpModuleLoader              - 11 modules loaded.
+ERROR 2014-10-02 15:00:36,960 [6    ] Default                                  - One or more errors occurred.
+System.AggregateException: One or more errors occurred. ---> Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Abp.WebApi.Controllers.Dynamic.Selectors.DyanamicHttpActionDescriptor.<ExecuteAsync>b__0(Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+---> (Inner Exception #0) Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)<---
+
+WARN  2014-10-02 15:00:36,963 [6    ] Default                                  - There are 1 validation errors:
+WARN  2014-10-02 15:00:36,963 [6    ] Default                                  - input is null! (input)
+ERROR 2014-10-02 15:00:41,454 [8    ] Default                                  - One or more errors occurred.
+System.AggregateException: One or more errors occurred. ---> Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at Abp.WebApi.Controllers.Dynamic.Selectors.DyanamicHttpActionDescriptor.<ExecuteAsync>b__0(Task`1 task)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+---> (Inner Exception #0) Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetTasks(GetTasksInput input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)<---
+
+WARN  2014-10-02 15:00:41,454 [8    ] Default                                  - There are 1 validation errors:
+WARN  2014-10-02 15:00:41,454 [8    ] Default                                  - input is null! (input)
