@@ -25,3 +25,4 @@ _TeamCity*
 thumbs.db
 *.DS_Store
 Desktop.ini
+SimpleTaskSystem.Application/bin/Debug/SimpleTaskSystem.Application.dll
